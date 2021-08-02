@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>ioTProduct example</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="product.css" rel="stylesheet">
+  </head>
+  <body height ="999">
+    
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between ">
+    <a class="py-2" href="#" aria-label="Product">
+    <img class="mb-12" src="assets/brand/iot.png" alt="" width="24" height="24">
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Upload</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Common Vulnerabilities</a>
+   <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>-->
+    <a class="py-2 d-none d-md-inline-block" href="#">Upload History</a>
+    <a class="py-2 d-none d-md-inline-block" href="index.html">Sign out</a>
+  </div>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center containerB">
+  <div class="col-md-7 p-lg-5 mx-auto my-5">
+    <h1 class="display-4 font-weight-normal text-center">Code Upload</h1>
+    <p class="lead font-weight-normal text-center">Upload your code to detect potential vulnerabilities.<br>To Compile, static analysis and dynamic analysis</p>
+    <br><br>
+   
+    <form class="form-signin" action="">
+      <!-- choose arc --
+      <div class="form-check form-check-inline" >
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">arm</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">mips</label>
+      </div><br><br>-->
+      <!-- choose iot device -->
+      <div class="input-group mb-3 ">
+        <div class="input-group-prepend ">
+          <label class="input-group-text " for="inputGroupSelect01">Device</label>
+        </div>
+        <select class="custom-select" id="inputGroupSelect01">
+          <option selected>Choose your ioT device</option>
+          <option value="1">D-link Router（KERNEL: 2.6.15-mips) </option>
+          <option value="2">iCatch DVR (KERNEL: 3.18.20-mips)</option>
+        </select>
+      </div>
+
+
+      <h5 class="fs-2 text-left ">File type</h5>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" onclick="hideWarring()" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+        <label class="form-check-label" for="inlineRadio1">C Files</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" onclick="showWarring()" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">執行檔</label>
+      </div>
+      <div class="alert alert-warning" role="alert" id="warningFile">
+        注意：執行檔由於編譯器版本可能不同，存在無法成功模擬動態分析風險。
+      </div>
+      <!-- upload code -->
+      <div class="input-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="inputGroupFileAddon01">File</span>
+        </div>
+        <div class="custom-file">
+          <input type="file" accept=".c" multiple="multiple" onclick="isMtpFile()" class="custom-file-input" id="fileupload" aria-describedby="inputGroupFileAddon01" >
+          <label class="custom-file-label text-left" for="inputGroupFile01">Choose file</label>
+        </div>
+      </div>
+      <br><br>
+      <button class="btn btn-success mb-3" type="submit">Upload and analysis</button>
+    </form>
+
+  </div>
+  
+</div>
+
+
+
+
+
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+$(function () {
+  $('#fileupload').fileupload({
+      dataType: 'json',
+      done: function (e, data) {
+          $.each(data.result.files, function (index, file) {
+              $('<p></p>').text(file.name).appendTo(document.body);
+          });
+      }
+  });
+});</script>
+  
+  </body>
+</html>

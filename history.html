@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.80.0">
+    <title>ioTProduct example</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.6/examples/product/">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="history.css" rel="stylesheet">
+  </head>
+  <body height ="999">
+    
+<nav class="site-header sticky-top py-1">
+  <div class="container d-flex flex-column flex-md-row justify-content-between ">
+    <a class="py-2" href="#" aria-label="Product">
+    <img class="mb-12" src="assets/brand/iot.png" alt="" width="24" height="24">
+    </a>
+    <a class="py-2 d-none d-md-inline-block" href="main.html">Code Upload</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Common Vulnerabilities</a>
+   <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+    <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>-->
+    <a class="py-2 d-none d-md-inline-block text-white" href="history.html">Upload History</a>
+    <a class="py-2 d-none d-md-inline-block" href="index.html">Sign out</a>
+  </div>
+</nav>
+
+<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center containerB">
+    <h3 class="display-5 font-weight-normal text-center"> </h3>
+    <div class="row p-lg-4">
+      <!-- history -->
+      <div class="col-md-8" >
+        <table class="table table-striped table-hover" id="sortTable">
+          <thead class="bg-light">
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">File Name</th>
+              <th scope="col">Size</th>
+              <th scope="col">Date</th>
+              <th scope="col">Device</th>
+              <th scope="col">Severity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td><a href="#" class="alert-link">Dlink_DCS-1130L_V1.08_8707</a></td>
+              <td>60 KB</td>
+              <td>2021-8-23</td>
+              <td>Dlink Router</td>
+              <td><span class="badge badge-pill badge-secondary">Waiting...</span></td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td><a href="#" class="alert-link">Dlink_DCS-1130L_V1.08_8707</a></td>
+              <td>56 KB</td>
+              <td>2021-8-22</td>
+              <td>Dlink Router</td>
+              <td><span class="badge badge-pill badge-success">Low</span></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td><a href="#" class="alert-link">Dlink_DCS-930L_V2.16</a></td>
+              <td>20 KB</td>
+              <td>2021-8-21</td>
+              <td>Dlink Router</td>
+              <td><span class="badge badge-pill badge-danger">Critical</span></td>
+            </tr>
+            <tr onclick="show4()">
+              <th scope="row">4</th>
+              <td><a href="#" class="alert-link">v2.0b1_20191230</a></td>
+              <td>33 KB</td>
+              <td>2021-8-20</td>
+              <td>iCatch DVR</td>
+              <td><span class="badge badge-pill badge-danger">Critical</span></td>
+            </tr>
+            <tr onclick="show5()">
+              <th scope="row">5</th>
+              <td><a href="#" class="alert-link">Dlink_DCS-1130L_V1.08_8707</a></td>
+              <td>54 KB</td>
+              <td>2021-8-19</td>
+              <td>Dlink Router</td>
+              <td><span class="badge badge-pill badge-warning">Medium</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- result -->
+      <div class="col-md" id="card1">
+        <h4 calss="font-weight-bold">Analysis Report</h4>
+        <div class="card border-dark" >
+          <div class="card-header font-weight-bold">v2.0b1_20191230</div>
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-pill badge-danger">Critical</span></h4>
+            <h6 class="card-subtitle mb-2 text-muted">2021-8-20</h6>
+            <p class="card-text">
+              <ul class="list-group  list-group-flush text-left">
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0031</a>  Some warning message. Blabala message to tell, so abcde cause this warning message.</li>
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0014</a> Another problem ooxx1234.</li>
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0002</a> Weak code. Check this again.</li>
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0009</a> Something may be wrong.</li>
+              </ul>
+            </p>
+            <!--
+              <a href="#" class="card-link">View Code</a>
+            <a href="#" class="card-link">About #0031</a>
+            -->
+          </div>
+        </div>
+      </div>
+      <!-- result -->
+      <div class="col-md" id="card2" style="display:none;">
+        <h4 calss="font-weight-bold">Analysis Report</h4>
+        <div class="card border-dark" >
+          <div class="card-header font-weight-bold">Dlink_DCS-1130L_V1.08_8707</div>
+          <div class="card-body">
+            <h4 class="card-title"><span class="badge badge-pill badge-warning">Medium</span></h4>
+            <h6 class="card-subtitle mb-2 text-muted">2021-8-19</h6>
+            <p class="card-text">
+              <ul class="list-group  list-group-flush text-left">
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0007</a> Another problem erro.</li>
+                <li class="list-group-item"><a hrer="#" class="alert-link">#0002</a> Weak code. Check this again.</li>
+              </ul>
+            </p>
+            <!--
+              <a href="#" class="card-link">View Code</a>
+            <a href="#" class="card-link">About #0031</a>
+            -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+
+
+
+
+
+<script src="history.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="node_modules/blueimp-file-upload/js/jquery.fileupload.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/vendor/jquery.ui.widget.js"></script>
+<script src="js/jquery.iframe-transport.js"></script>
+<script src="js/jquery.fileupload.js"></script>
+<script>window.jQuery || document.write('<script src="assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="assets/dist/js/bootstrap.bundle.min.js"></script>
+
+  
+  </body>
+</html>

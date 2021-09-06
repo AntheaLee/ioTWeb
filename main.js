@@ -1,15 +1,18 @@
 document.getElementById("warningFile").style.display = "none";
-var multipulFile = true;
+document.getElementById("input-SglFile").style.display = "none";
+
 function hideWarring() {
-  var x = document.getElementById("warningFile");
-    x.style.display = "none";
-    multipulFile = false;
+    document.getElementById("warningFile").style.display = "none";
+    document.getElementById("input-MultiCFile").style.display = "block";
+    document.getElementById("input-SglFile").style.display = "none";
+
+
 }
 
 function showWarring() {
-  var x = document.getElementById("warningFile");
-    x.style.display = "block";
-    multipulFile = true;
+    document.getElementById("warningFile").style.display = "block";
+    document.getElementById("input-MultiCFile").style.display = "none";
+    document.getElementById("input-SglFile").style.display ="block";
 }
 
 function isMtpFile(){

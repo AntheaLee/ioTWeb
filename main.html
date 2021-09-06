@@ -36,7 +36,7 @@
 
     
     <!-- Custom styles for this template -->
-    <link href="product.css" rel="stylesheet">
+    <link href="main.css" rel="stylesheet">
   </head>
   <body height ="999">
     
@@ -45,16 +45,16 @@
     <a class="py-2" href="#" aria-label="Product">
     <img class="mb-12" src="assets/brand/iot.png" alt="" width="24" height="24">
     </a>
-    <a class="py-2 d-none d-md-inline-block" href="#">Upload</a>
+    <a class="py-2 d-none d-md-inline-block text-white" href="main.html">Code Upload</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Common Vulnerabilities</a>
    <!-- <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
     <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>-->
-    <a class="py-2 d-none d-md-inline-block" href="#">Upload History</a>
+    <a class="py-2 d-none d-md-inline-block" href="history.html">Upload History</a>
     <a class="py-2 d-none d-md-inline-block" href="index.html">Sign out</a>
   </div>
 </nav>
 
-<div class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center containerB">
+<div class="position-relative overflow-hidden  text-center containerB">
   <div class="col-md-7 p-lg-5 mx-auto my-5">
     <h1 class="display-4 font-weight-normal text-center">Code Upload</h1>
     <p class="lead font-weight-normal text-center">Upload your code to detect potential vulnerabilities.<br>To Compile, static analysis and dynamic analysis</p>
@@ -77,7 +77,7 @@
         </div>
         <select class="custom-select" id="inputGroupSelect01">
           <option selected>Choose your ioT device</option>
-          <option value="1">D-link Router（KERNEL: 2.6.15-mips) </option>
+          <option value="1">Dlink Router（KERNEL: 2.6.15-mips) </option>
           <option value="2">iCatch DVR (KERNEL: 3.18.20-mips)</option>
         </select>
       </div>
@@ -100,9 +100,13 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupFileAddon01">File</span>
         </div>
-        <div class="custom-file">
-          <input type="file" accept=".c" multiple="multiple" onclick="isMtpFile()" class="custom-file-input" id="fileupload" aria-describedby="inputGroupFileAddon01" >
-          <label class="custom-file-label text-left" for="inputGroupFile01">Choose file</label>
+        <div class="custom-file" id="input-MultiCFile">
+          <input type="file" accept=".c" multiple="multiple"  class="custom-file-input" id="fileuploadM" >
+          <label class="custom-file-label text-left" for="MultiCFile">Choose file</label>
+        </div>
+        <div class="custom-file" id="input-SglFile">
+          <input type="file"  class="custom-file-input" id="fileuploadS"  >
+          <label class="custom-file-label text-left" for="SglFile">Choose file</label>
         </div>
       </div>
       <br><br>

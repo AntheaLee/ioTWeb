@@ -43,8 +43,8 @@ body{
  * Extra utilities
  */
 td { 
-  cursor: pointer; 
-}
+ /* cursor: pointer; 
+*/}
 .flex-equal > * {
   -ms-flex: 1;
   flex: 1;

@@ -46,7 +46,7 @@ $("#upload-btn").click(function(){
     fd.append("file", files[i]);
   }
   $.ajax({
-    url: "10.118.126.210/api/files",
+    url: "10.118.126.245/api/files",
     method: "POST",
     data: fd,
     contentType: false,
